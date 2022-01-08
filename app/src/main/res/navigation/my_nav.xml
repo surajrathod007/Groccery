@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.surajrathod.groccery.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productInfo"
+            app:destination="@id/productInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/productInfo"
+        android:name="com.surajrathod.groccery.Fragments.ProductInfo"
+        android:label="ProductInfo" >
+        <action
+            android:id="@+id/action_productInfo_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="product"
+            app:argType="com.surajrathod.groccery.model.Product" />
+        <action
+            android:id="@+id/action_productInfo_to_placeOrder"
+            app:destination="@id/placeOrder" />
+        <action
+            android:id="@+id/action_productInfo_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeOrder"
+        android:name="com.surajrathod.groccery.Fragments.PlaceOrder"
+        android:label="PlaceOrder" >
+        <argument
+            android:name="productData"
+            app:argType="com.surajrathod.groccery.model.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.surajrathod.groccery.Fragments.OrdersFragment"
+        android:label="OrdersFragment" />
+</navigation>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="10dp"
+    android:elevation="20dp"
+    android:id="@+id/product_item_container">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/productImg"
+            android:src="@drawable/bluet"/>
+
+        <TextView
+            android:textColor="#CB000000"
+            android:textStyle="bold"
+            android:id="@+id/txtPrice"
+            android:text="$11.20"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grey T-Shirt ,"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

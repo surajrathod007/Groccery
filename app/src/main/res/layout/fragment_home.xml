@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@color/Alice_blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.HomeFragment">
+
+<!--        <TextView-->
+<!--            android:id="@+id/textview1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="141dp"-->
+<!--            android:layout_marginTop="342dp"-->
+<!--            android:layout_marginEnd="140dp"-->
+<!--            android:layout_marginBottom="342dp"-->
+<!--            android:text="click me"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="35sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true"
+            android:background="@color/Alice_blue"
+            android:id="@+id/app_bar_layout"
+            >
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:clickable="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, Shop!"
+                        android:id="@+id/appTitle"
+                        android:textSize="30sp"
+                        android:textColor="#B0000000"
+                        />
+
+
+                    <ImageView
+                        android:padding="5dp"
+                        android:clickable="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:backgroundTint="#B0000000"
+                        android:backgroundTintMode="screen"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/searchBtn"
+                        android:src="@drawable/search"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="6dp"
+                android:transitionGroup="true">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
